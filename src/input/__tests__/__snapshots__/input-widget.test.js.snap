@@ -1,0 +1,11 @@
+exports[`InputWidget should render correctly with a default type of text if none supplied 1`] = `
+<input
+  type="text" />
+`;
+
+exports[`InputWidget should render correctly with a default type of text if none supplied 2`] = `
+<input
+  max="10"
+  min="1"
+  type="number" />
+`;

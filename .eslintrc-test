@@ -1,0 +1,9 @@
+{
+    "env": {
+        "jest": true
+    },
+    "extends": ".eslintrc",
+    "rules": {
+        "import/no-extraneous-dependencies": [2, { "devDependencies": true }]
+    }
+}

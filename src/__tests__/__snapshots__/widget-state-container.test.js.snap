@@ -1,0 +1,80 @@
+exports[`InputWidget should listen to and call event methods, such as onBlur 1`] = `
+<WidgetStateContainer
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  value="foo">
+  <InputWidget
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    value="foo">
+    <input
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      value="foo" />
+  </InputWidget>
+</WidgetStateContainer>
+`;
+
+exports[`InputWidget should render correctly, passing all props to the decorated component 1`] = `
+<InputWidget
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  type="text"
+  value="" />
+`;
+
+exports[`InputWidget should render correctly, passing all props to the decorated component 2`] = `
+<InputWidget
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  type="text"
+  value="test" />
+`;
+
+exports[`InputWidget should set the value in state when the onChange event occurs and should call the onChange prop with the new value 1`] = `
+<WidgetStateContainer
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}>
+  <InputWidget
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    value="testEvent">
+    <input
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      value="testEvent" />
+  </InputWidget>
+</WidgetStateContainer>
+`;

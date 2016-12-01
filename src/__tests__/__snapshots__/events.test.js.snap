@@ -1,0 +1,21 @@
+exports[`events should return a array of event types 1`] = `
+Array [
+  "onChange",
+  "onKeyPress",
+  "onKeyUp",
+  "onKeyDown",
+  "onBlur",
+  "onFocus",
+]
+`;
+
+exports[`events should return an object with each event type as a key and a noop function as the value 1`] = `
+Object {
+  "onBlur": [Function],
+  "onChange": [Function],
+  "onFocus": [Function],
+  "onKeyDown": [Function],
+  "onKeyPress": [Function],
+  "onKeyUp": [Function],
+}
+`;
