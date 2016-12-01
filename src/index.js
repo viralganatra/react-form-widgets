@@ -1,3 +1,3 @@
-import InputWidget from './input/input';
+import InputWidget from './input/single/input';
 
 export default InputWidget;
