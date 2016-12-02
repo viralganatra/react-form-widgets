@@ -1,0 +1,1 @@
+exports[`TextareaWidget should render a single textarea widget 1`] = `<textarea />`;
