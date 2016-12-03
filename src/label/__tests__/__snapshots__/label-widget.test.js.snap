@@ -1,0 +1,13 @@
+exports[`LabelWidget should apply any label props to the label element 1`] = `
+<label
+  className="test"
+  htmlFor="test">
+  Test
+</label>
+`;
+
+exports[`LabelWidget should render a single label widget correctly 1`] = `
+<label>
+  Test
+</label>
+`;
