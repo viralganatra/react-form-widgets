@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { EventTypes, DefaultEventProps } from './events';
 
 export default function WidgetStateContainerHOC(WrappedComponent) {
     return class WidgetStateContainer extends Component {
         static defaultProps = DefaultEventProps;
+
+        static propTypes = {
+            type: PropTypes.string,
+        }
 
         constructor(props) {
             super(props);
@@ -20,9 +24,7 @@ export default function WidgetStateContainerHOC(WrappedComponent) {
         onEvent = (eventName) => (event, value) => {
             const { [eventName]: onEventType } = this.props;
 
-            const newValue = value || this.state.value;
-
-            onEventType(newValue, event);
+            onEventType(this.getEventParams(event, value));
         }
 
         onChange = (event) => {
@@ -36,11 +38,30 @@ export default function WidgetStateContainerHOC(WrappedComponent) {
             this.onEvent('onChange')(event, value);
         }
 
+        isCheckedType() {
+            const { type } = this.props;
+
+            return type === 'checkbox' || type === 'radio';
+        }
+
+        getEventParams(event, value) {
+            const { target: { checked } } = event;
+            const newValue = value || this.state.value;
+
+            let data = { event, value: newValue };
+
+            if (this.isCheckedType()) {
+                data = { ...data, checked };
+            }
+
+            return data;
+        }
+
         getEventProps() {
             return EventTypes.reduce((memo, eventName) => {
                 return {
                     ...memo,
-                    [eventName]: this.onEvent(eventName),
+                    [eventName]: this[eventName] || this.onEvent(eventName),
                 };
             }, {});
         }
@@ -51,7 +72,6 @@ export default function WidgetStateContainerHOC(WrappedComponent) {
                     {...this.props}
                     {...this.getEventProps()}
                     value={this.state.value}
-                    onChange={this.onChange}
                 />
             );
         }

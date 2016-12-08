@@ -47,7 +47,7 @@ exports[`InputWidget should render correctly, passing all props to the decorated
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onKeyUp={[Function]}
-  type="text"
+  type="checkbox"
   value="test" />
 `;
 

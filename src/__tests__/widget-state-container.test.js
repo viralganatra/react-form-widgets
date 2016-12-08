@@ -16,7 +16,7 @@ describe('InputWidget', () => {
 
     it('should render correctly, passing all props to the decorated component', () => {
         const wrapperFirst = shallow(<ComposedComponent type="text" />);
-        const wrapperSecond = shallow(<ComposedComponent type="text" value="test" />);
+        const wrapperSecond = shallow(<ComposedComponent type="checkbox" value="test" />);
 
         expect(shallowToJson(wrapperFirst)).toMatchSnapshot();
         expect(shallowToJson(wrapperSecond)).toMatchSnapshot();
@@ -44,10 +44,10 @@ describe('InputWidget', () => {
         wrapper.simulate('blur');
         wrapper.simulate('focus');
 
-        expect(methodSpy.mock.calls[0][0]).toBe('foo');
-        expect(methodSpy.mock.calls[1][0]).toBe('foo');
-        expect(methodSpy.mock.calls[2][0]).toBe('foo');
-        expect(methodSpy.mock.calls[3][0]).toBe('foo');
+        expect(methodSpy.mock.calls[0][0].value).toBe('foo');
+        expect(methodSpy.mock.calls[1][0].value).toBe('foo');
+        expect(methodSpy.mock.calls[2][0].value).toBe('foo');
+        expect(methodSpy.mock.calls[3][0].value).toBe('foo');
     });
 
     it('should set the value in state when the onChange event occurs and should call the onChange prop with the new value', () => {
@@ -57,6 +57,21 @@ describe('InputWidget', () => {
         wrapper.simulate('change', { target: { value: 'testEvent' } });
 
         expect(mountToJson(wrapper)).toMatchSnapshot();
-        expect(methodSpy.mock.calls[0][0]).toBe('testEvent');
+        expect(methodSpy.mock.calls[0][0].value).toBe('testEvent');
+    });
+
+    it('should send the checked property when the item is a checkbox or radio', () => {
+        const methodSpy = jest.fn();
+        const wrapper = mount(<ComposedComponent onChange={methodSpy} />);
+        const wrapperCheckbox = mount(<ComposedComponent type="checkbox" onChange={methodSpy} />);
+        const wrapperRadio = mount(<ComposedComponent type="radio" onChange={methodSpy} />);
+
+        wrapper.simulate('change');
+        wrapperCheckbox.simulate('change');
+        wrapperRadio.simulate('change');
+
+        expect('checked' in methodSpy.mock.calls[0][0]).toBe(false);
+        expect('checked' in methodSpy.mock.calls[1][0]).toBe(true);
+        expect('checked' in methodSpy.mock.calls[2][0]).toBe(true);
     });
 });
