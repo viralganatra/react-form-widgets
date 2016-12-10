@@ -1,13 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
 import LabelWidget from '../label-widget';
 
 describe('LabelWidget', () => {
     it('should render a single label widget correctly', () => {
-        const wrapper= shallow(<LabelWidget>Test</LabelWidget>);
+        const wrapper = shallow(<LabelWidget>Test</LabelWidget>);
 
-        expect(shallowToJson(wrapper)).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
     });
 
     it('should throw an error if there are no children', () => {
@@ -26,6 +24,6 @@ describe('LabelWidget', () => {
             <LabelWidget className="test" htmlFor="test">Test</LabelWidget>,
         );
 
-        expect(shallowToJson(wrapper)).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
     });
 });

@@ -1,6 +1,4 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { shallowToJson, mountToJson } from 'enzyme-to-json';
 import WidgetStateContainer from '../widget-state-container';
 
 jest.mock('../events');
@@ -18,8 +16,8 @@ describe('InputWidget', () => {
         const wrapperFirst = shallow(<ComposedComponent type="text" />);
         const wrapperSecond = shallow(<ComposedComponent type="checkbox" value="test" />);
 
-        expect(shallowToJson(wrapperFirst)).toMatchSnapshot();
-        expect(shallowToJson(wrapperSecond)).toMatchSnapshot();
+        expect(wrapperFirst).toMatchSnapshot();
+        expect(wrapperSecond).toMatchSnapshot();
     });
 
     it('should listen to and call event methods, such as onBlur', () => {
@@ -35,7 +33,7 @@ describe('InputWidget', () => {
             />,
         );
 
-        expect(mountToJson(wrapper)).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
 
         wrapper.simulate('change');
         wrapper.simulate('keyPress');
@@ -56,7 +54,7 @@ describe('InputWidget', () => {
 
         wrapper.simulate('change', { target: { value: 'testEvent' } });
 
-        expect(mountToJson(wrapper)).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
         expect(methodSpy.mock.calls[0][0].value).toBe('testEvent');
     });
 
