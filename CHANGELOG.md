@@ -1,3 +1,7 @@
+## 0.5.0 (10 Dec, 2016)
+
+* Implement checkbox group
+
 ## 0.4.0 (08 Dec, 2016)
 
 * Change return value of events to return an object

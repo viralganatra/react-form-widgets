@@ -1,0 +1,30 @@
+exports[`InputGroupWidget should render a list of labels with inputs, based on the \`items\` prop 1`] = `
+<div>
+  <Item
+    checked={true}
+    label={
+      Object {
+        "content": "test 1",
+      }
+    }
+    onChange={[Function]}
+    value="1" />
+  <Item
+    checked={true}
+    label={
+      Object {
+        "content": "test 2",
+      }
+    }
+    onChange={[Function]}
+    value="2" />
+</div>
+`;
+
+exports[`InputGroupWidget should render a list of labels with inputs, based on the \`items\` prop 2`] = `
+"Expected \"WrappedComponent\" provided as the first argument to
+        CheckboxContainerHOC to be a function. Instead, received
+        object."
+`;
+
+exports[`InputGroupWidget should validate the prop types 1`] = `"isChecked is not a function"`;

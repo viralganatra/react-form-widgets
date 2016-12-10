@@ -1,0 +1,175 @@
+exports[`CheckboxContainer should listen to the onChange event and return an array of checked item values 1`] = `
+<CheckboxContainer
+  items={
+    Array [
+      Object {
+        "label": "test 1",
+        "value": "1",
+      },
+      Object {
+        "label": "test 2",
+        "value": "2",
+      },
+    ]
+  }
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  type="checkbox"
+  value={
+    Array [
+      "2",
+    ]
+  }>
+  <GroupComponent
+    isChecked={[Function]}
+    items={
+      Array [
+        Object {
+          "label": "test 1",
+          "value": "1",
+        },
+        Object {
+          "label": "test 2",
+          "value": "2",
+        },
+      ]
+    }
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox">
+    <div>
+      <input
+        checked={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        type="checkbox"
+        value="1" />
+      <input
+        checked={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        type="checkbox"
+        value="2" />
+    </div>
+  </GroupComponent>
+</CheckboxContainer>
+`;
+
+exports[`CheckboxContainer should listen to the onChange event and return an array of checked item values 2`] = `
+<CheckboxContainer
+  items={
+    Array [
+      Object {
+        "label": "test 1",
+        "value": "1",
+      },
+      Object {
+        "label": "test 2",
+        "value": "2",
+      },
+    ]
+  }
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  type="checkbox"
+  value={
+    Array [
+      "2",
+    ]
+  }>
+  <GroupComponent
+    isChecked={[Function]}
+    items={
+      Array [
+        Object {
+          "label": "test 1",
+          "value": "1",
+        },
+        Object {
+          "label": "test 2",
+          "value": "2",
+        },
+      ]
+    }
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyPress={[Function]}
+    onKeyUp={[Function]}
+    type="checkbox">
+    <div>
+      <input
+        checked={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        type="checkbox"
+        value="1" />
+      <input
+        checked={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        type="checkbox"
+        value="2" />
+    </div>
+  </GroupComponent>
+</CheckboxContainer>
+`;
+
+exports[`CheckboxContainer should render correctly, validating prop types 1`] = `
+"Expected \"WrappedComponent\" provided as the first argument to
+        CheckboxContainerHOC to be a function. Instead, received
+        object."
+`;
+
+exports[`CheckboxContainer should render correctly, validating prop types 2`] = `
+<GroupComponent
+  isChecked={[Function]}
+  items={
+    Array [
+      Object {
+        "label": "test 1",
+        "value": "1",
+      },
+      Object {
+        "label": "test 2",
+        "value": "2",
+      },
+    ]
+  }
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  type="checkbox" />
+`;

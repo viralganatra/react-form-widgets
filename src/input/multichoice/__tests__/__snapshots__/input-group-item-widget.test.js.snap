@@ -1,0 +1,12 @@
+exports[`InputGroupItemWidget should render correctly 1`] = `
+<Label
+  className="label-class">
+  <Input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+    value="2" />
+   
+  Label
+</Label>
+`;
