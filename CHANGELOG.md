@@ -1,3 +1,7 @@
+## 0.6.0 (12 Dec, 2016)
+
+* Implement radio group
+
 ## 0.5.0 (10 Dec, 2016)
 
 * Implement checkbox group

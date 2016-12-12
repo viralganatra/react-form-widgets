@@ -1,5 +1,5 @@
-exports[`CheckboxContainer should listen to the onChange event and return an array of checked item values 1`] = `
-<CheckboxContainer
+exports[`RadioContainer should listen to the onChange event and return the checked value 1`] = `
+<RadioContainer
   items={
     Array [
       Object {
@@ -18,12 +18,8 @@ exports[`CheckboxContainer should listen to the onChange event and return an arr
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onKeyUp={[Function]}
-  type="checkbox"
-  value={
-    Array [
-      "2",
-    ]
-  }>
+  type="radio"
+  value="2">
   <GroupComponent
     isChecked={[Function]}
     items={
@@ -44,7 +40,7 @@ exports[`CheckboxContainer should listen to the onChange event and return an arr
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
-    type="checkbox">
+    type="radio">
     <div>
       <input
         checked={true}
@@ -54,25 +50,25 @@ exports[`CheckboxContainer should listen to the onChange event and return an arr
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         onKeyUp={[Function]}
-        type="checkbox"
+        type="radio"
         value="1" />
       <input
-        checked={true}
+        checked={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         onKeyUp={[Function]}
-        type="checkbox"
+        type="radio"
         value="2" />
     </div>
   </GroupComponent>
-</CheckboxContainer>
+</RadioContainer>
 `;
 
-exports[`CheckboxContainer should listen to the onChange event and return an array of checked item values 2`] = `
-<CheckboxContainer
+exports[`RadioContainer should listen to the onChange event and return the checked value 2`] = `
+<RadioContainer
   items={
     Array [
       Object {
@@ -91,12 +87,8 @@ exports[`CheckboxContainer should listen to the onChange event and return an arr
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onKeyUp={[Function]}
-  type="checkbox"
-  value={
-    Array [
-      "2",
-    ]
-  }>
+  type="radio"
+  value="2">
   <GroupComponent
     isChecked={[Function]}
     items={
@@ -117,7 +109,7 @@ exports[`CheckboxContainer should listen to the onChange event and return an arr
     onKeyDown={[Function]}
     onKeyPress={[Function]}
     onKeyUp={[Function]}
-    type="checkbox">
+    type="radio">
     <div>
       <input
         checked={false}
@@ -127,30 +119,30 @@ exports[`CheckboxContainer should listen to the onChange event and return an arr
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         onKeyUp={[Function]}
-        type="checkbox"
+        type="radio"
         value="1" />
       <input
-        checked={false}
+        checked={true}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyPress={[Function]}
         onKeyUp={[Function]}
-        type="checkbox"
+        type="radio"
         value="2" />
     </div>
   </GroupComponent>
-</CheckboxContainer>
+</RadioContainer>
 `;
 
-exports[`CheckboxContainer should render correctly 1`] = `
+exports[`RadioContainer should render correctly 1`] = `
 "Expected \"WrappedComponent\" provided as the first argument to
-        CheckboxContainerHOC to be a function. Instead, received
+        RadioContainerHOC to be a function. Instead, received
         object."
 `;
 
-exports[`CheckboxContainer should render correctly 2`] = `
+exports[`RadioContainer should render correctly 2`] = `
 <GroupComponent
   isChecked={[Function]}
   items={
@@ -171,5 +163,5 @@ exports[`CheckboxContainer should render correctly 2`] = `
   onKeyDown={[Function]}
   onKeyPress={[Function]}
   onKeyUp={[Function]}
-  type="checkbox" />
+  type="radio" />
 `;
