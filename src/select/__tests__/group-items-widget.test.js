@@ -1,8 +1,6 @@
 import React from 'react';
 import GroupItems from '../group-items-widget';
 
-jest.mock('../group-item-widget', () => jest.fn((props) => <li {...props} />));
-
 function noop() {}
 
 const props = {

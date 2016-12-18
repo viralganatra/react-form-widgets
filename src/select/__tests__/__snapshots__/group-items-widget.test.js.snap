@@ -1,11 +1,13 @@
 exports[`GroupItemsWidget should render an array of items 1`] = `
 <div>
-  <mockConstructor
-    label="test 1"
-    onClick={[Function]} />
-  <mockConstructor
-    label="test 2"
-    onClick={[Function]} />
+  <li
+    onClick={[Function]}>
+    test 1
+  </li>
+  <li
+    onClick={[Function]}>
+    test 2
+  </li>
 </div>
 `;
 

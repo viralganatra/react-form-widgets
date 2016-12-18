@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import GroupItemWidget from './group-item-widget';
 
 export default class SelectMultichoiceGroup extends Component {
     static propTypes = {
@@ -24,11 +23,12 @@ export default class SelectMultichoiceGroup extends Component {
                     const { label, value } = item;
 
                     return (
-                        <GroupItemWidget
+                        <li
                             key={value}
-                            label={label}
                             onClick={this.onItemSelection(item)}
-                        />
+                        >
+                            {label}
+                        </li>
                     );
                 })}
             </div>
