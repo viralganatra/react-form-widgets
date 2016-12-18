@@ -63,4 +63,13 @@ describe('Container', () => {
 
         expect(wrapper).toMatchSnapshot();
     });
+
+    it('should call the onChange event from props when onItemSelection is called', () => {
+        const methodSpy = jest.fn();
+        const wrapper = shallow(<SelectContainer {...props} onChange={methodSpy} />);
+
+        wrapper.find('div').childAt(1).simulate('itemSelection', props.items[1]);
+
+        expect(methodSpy).toHaveBeenCalledWith(props.items[1]);
+    });
 });

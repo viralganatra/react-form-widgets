@@ -7,6 +7,8 @@ import GroupItemsWidget from './group-items-widget';
 const SHOW_ITEMS = true;
 const HIDE_ITEMS = false;
 
+function noop() {}
+
 export default class SelectWidget extends Component {
     static propTypes = {
         label: PropTypes.string,
@@ -21,7 +23,12 @@ export default class SelectWidget extends Component {
                 PropTypes.number,
             ]).isRequired,
         })).isRequired,
+        onChange: PropTypes.func.isRequired,
     };
+
+    static defaultProps = {
+        onChange: noop,
+    }
 
     constructor(props) {
         super(props);
@@ -40,6 +47,8 @@ export default class SelectWidget extends Component {
             ...this.getSelectedItem(item),
             displayItems: HIDE_ITEMS,
         });
+
+        this.props.onChange(item);
     }
 
     onToggleItems(displayItems) {
