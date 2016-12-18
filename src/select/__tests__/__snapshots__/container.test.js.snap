@@ -1,0 +1,131 @@
+exports[`Container should render correctly 1`] = `
+<div>
+  <mockConstructor
+    onClick={[Function]} />
+  <Mock
+    items={
+      Array [
+        Object {
+          "label": "Test 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Test 2",
+          "value": 2,
+        },
+      ]
+    }
+    onClickOutside={[Function]}
+    onItemSelection={[Function]}
+    shouldDisplay={false} />
+</div>
+`;
+
+exports[`Container should render correctly 2`] = `
+<div>
+  <mockConstructor
+    label="Test 1"
+    onClick={[Function]} />
+  <Mock
+    items={
+      Array [
+        Object {
+          "label": "Test 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Test 2",
+          "value": 2,
+        },
+      ]
+    }
+    onClickOutside={[Function]}
+    onItemSelection={[Function]}
+    shouldDisplay={false} />
+</div>
+`;
+
+exports[`Container should render correctly 3`] = `
+<div>
+  <mockConstructor
+    onClick={[Function]} />
+  <Mock
+    items={
+      Array [
+        Object {
+          "label": "Test 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Test 2",
+          "value": 2,
+        },
+      ]
+    }
+    onClickOutside={[Function]}
+    onItemSelection={[Function]}
+    shouldDisplay={true} />
+</div>
+`;
+
+exports[`Container should render correctly 4`] = `
+<div>
+  <mockConstructor
+    onClick={[Function]} />
+  <Mock
+    items={
+      Array [
+        Object {
+          "label": "Test 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Test 2",
+          "value": 2,
+        },
+      ]
+    }
+    onClickOutside={[Function]}
+    onItemSelection={[Function]}
+    shouldDisplay={false} />
+</div>
+`;
+
+exports[`Container should set the selected item in state when onItemSelection is called 1`] = `
+<div>
+  <mockConstructor
+    label="Test 2"
+    onClick={[Function]} />
+  <Mock
+    items={
+      Array [
+        Object {
+          "label": "Test 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Test 2",
+          "value": 2,
+        },
+      ]
+    }
+    onClickOutside={[Function]}
+    onItemSelection={[Function]}
+    shouldDisplay={false} />
+</div>
+`;
+
+exports[`Container should validate the prop types 1`] = `
+"Warning: Failed prop type: Invalid prop \`label\` of type \`number\` supplied to \`SelectWidget\`, expected \`string\`.
+    in SelectWidget"
+`;
+
+exports[`Container should validate the prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`value\` supplied to \`SelectWidget\`.
+    in SelectWidget"
+`;
+
+exports[`Container should validate the prop types 3`] = `
+"Warning: Failed prop type: Invalid prop \`items[0].value\` supplied to \`SelectWidget\`.
+    in SelectWidget"
+`;

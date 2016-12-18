@@ -1,0 +1,20 @@
+exports[`GroupItemsContainer should render correctly 1`] = `null`;
+
+exports[`GroupItemsContainer should render correctly 2`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "overflow": "auto",
+      "width": "220px",
+    }
+  }>
+  <Item
+    test="1" />
+</div>
+`;
+
+exports[`GroupItemsContainer should validate the prop types 1`] = `
+"Warning: Failed prop type: The prop \`shouldDisplay\` is marked as required in \`SelectGroupItemsContainer\`, but its value is \`null\`.
+    in SelectGroupItemsContainer"
+`;

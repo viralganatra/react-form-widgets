@@ -15,7 +15,7 @@
     "clean": "rimraf lib",
     "test": "jest --onlyChanged",
     "test:ci": "npm run lint && npm run test",
-    "lint:src": "eslint src --ignore-pattern '**/*.test.js'",
+    "lint:src": "eslint src --ignore-pattern '**/*.test.js' --ignore-pattern '**/__mocks__/*'",
     "lint:tests": "eslint **/__tests__/*.js -c .eslintrc-test",
     "lint": "npm run lint:src && npm run lint:tests"
   },

@@ -1,0 +1,20 @@
+exports[`GroupItemsWidget should render an array of items 1`] = `
+<div>
+  <mockConstructor
+    label="test 1"
+    onClick={[Function]} />
+  <mockConstructor
+    label="test 2"
+    onClick={[Function]} />
+</div>
+`;
+
+exports[`GroupItemsWidget should validate the prop types 1`] = `
+"Warning: Failed prop type: The prop \`items[0].label\` is marked as required in \`SelectMultichoiceGroup\`, but its value is \`undefined\`.
+    in SelectMultichoiceGroup"
+`;
+
+exports[`GroupItemsWidget should validate the prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`onItemSelection\` of type \`number\` supplied to \`SelectMultichoiceGroup\`, expected \`function\`.
+    in SelectMultichoiceGroup"
+`;

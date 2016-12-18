@@ -1,0 +1,35 @@
+exports[`LabelWidget should render correctly 1`] = `
+<div
+  className="bar"
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "grey",
+    }
+  }>
+  test
+</div>
+`;
+
+exports[`LabelWidget should render correctly 2`] = `
+<div
+  className="bar"
+  onClick={[Function]}>
+  test
+</div>
+`;
+
+exports[`LabelWidget should validate the prop types 1`] = `
+"Warning: Failed prop type: Invalid prop \`label\` of type \`number\` supplied to \`SelectLabel\`, expected \`string\`.
+    in SelectLabel"
+`;
+
+exports[`LabelWidget should validate the prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`placeholder\` of type \`number\` supplied to \`SelectLabel\`, expected \`string\`.
+    in SelectLabel"
+`;
+
+exports[`LabelWidget should validate the prop types 3`] = `
+"Warning: Failed prop type: Invalid prop \`onClick\` of type \`array\` supplied to \`SelectLabel\`, expected \`function\`.
+    in SelectLabel"
+`;

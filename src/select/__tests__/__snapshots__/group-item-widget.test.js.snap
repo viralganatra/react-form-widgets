@@ -1,0 +1,16 @@
+exports[`GroupItemWidget should render correctly 1`] = `
+<li
+  onClick={[Function]}>
+  test
+</li>
+`;
+
+exports[`GroupItemWidget should validate the prop types 1`] = `
+"Warning: Failed prop type: The prop \`label\` is marked as required in \`SelectMultichoiceGroupItem\`, but its value is \`null\`.
+    in SelectMultichoiceGroupItem"
+`;
+
+exports[`GroupItemWidget should validate the prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`onClick\` of type \`string\` supplied to \`SelectMultichoiceGroupItem\`, expected \`function\`.
+    in SelectMultichoiceGroupItem"
+`;
