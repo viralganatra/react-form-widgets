@@ -1,14 +1,14 @@
 exports[`InputGroupItemWidget should render correctly 1`] = `
-<Label
+<mockConstructor
   className="label-class">
-  <Input
+  <mockConstructor
     checked={true}
     onChange={[Function]}
     type="checkbox"
     value="2" />
    
   Label
-</Label>
+</mockConstructor>
 `;
 
 exports[`InputGroupItemWidget should validate prop types 1`] = `

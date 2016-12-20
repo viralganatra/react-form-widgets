@@ -1,8 +1,8 @@
 import React from 'react';
 import InputGroupItemWidget from '../input-group-item-widget';
 
-jest.mock('../../single/input');
-jest.mock('../../../label/label-widget');
+jest.mock('../../single/input', () => jest.fn());
+jest.mock('../../../label/label-widget', () => jest.fn());
 
 const props = {
     label: {
