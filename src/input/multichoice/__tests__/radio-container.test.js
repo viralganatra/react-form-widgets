@@ -4,7 +4,7 @@ import GroupComponent from '../__mocks__/component-group';
 
 jest.mock('../../../events');
 
-const data = {
+const props = {
     items: [
         { label: 'test 1', value: '1' },
         { label: 'test 2', value: '2' },
@@ -15,35 +15,38 @@ const data = {
 describe('RadioContainer', () => {
     let Composed;
 
-    beforeEach(() => {
+    beforeAll(() => {
         Composed = RadioContainer(GroupComponent);
     });
 
     it('should render correctly', () => {
-        const wrapper = shallow(<Composed {...data} />);
+        const wrapper = shallow(<Composed {...props} />);
 
         expect(() => RadioContainer({})).toThrowErrorMatchingSnapshot();
         expect(wrapper).toMatchSnapshot();
     });
 
     it('should validate prop types', () => {
-        const error = console.error;
-        console.error = jest.fn();
+        const wrapperInvalidItems = () => shallow(
+            <Composed {...props} items={2} />,
+        );
 
-        shallow(<Composed />);
-        shallow(<Composed type="text" />);
-        shallow(<Composed value={2} />);
+        const wrapperInvalidType = () => shallow(
+            <Composed {...props} type="checkbox" />,
+        );
 
-        expect(console.error.mock.calls[0][0]).toBeDefined();
-        expect(console.error.mock.calls[1][0]).toBeDefined();
-        expect(console.error.mock.calls[2][0]).toBeDefined();
+        const wrapperInvalidValue = () => shallow(
+            <Composed {...props} value={2} />,
+        );
 
-        console.error = error;
+        expect(wrapperInvalidItems).toThrowErrorMatchingSnapshot();
+        expect(wrapperInvalidType).toThrowErrorMatchingSnapshot();
+        expect(wrapperInvalidValue).toThrowErrorMatchingSnapshot();
     });
 
     it('should listen to the onChange event and return the checked value', () => {
         const methodSpy = jest.fn();
-        const wrapper = mount(<Composed {...data} onChange={methodSpy} />);
+        const wrapper = mount(<Composed {...props} onChange={methodSpy} />);
 
         wrapper.find('input').at(0).simulate('change', { target: { value: '1' } });
 

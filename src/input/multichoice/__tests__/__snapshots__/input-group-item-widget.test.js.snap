@@ -10,3 +10,13 @@ exports[`InputGroupItemWidget should render correctly 1`] = `
   Label
 </Label>
 `;
+
+exports[`InputGroupItemWidget should validate prop types 1`] = `
+"Warning: Failed prop type: Invalid prop \`label\` of type \`number\` supplied to \`InputMultichoiceGroupItem\`, expected \`object\`.
+    in InputMultichoiceGroupItem"
+`;
+
+exports[`InputGroupItemWidget should validate prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`value\` of type \`number\` supplied to \`InputMultichoiceGroupItem\`, expected \`string\`.
+    in InputMultichoiceGroupItem"
+`;

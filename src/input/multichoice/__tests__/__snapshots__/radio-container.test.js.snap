@@ -165,3 +165,18 @@ exports[`RadioContainer should render correctly 2`] = `
   onKeyUp={[Function]}
   type="radio" />
 `;
+
+exports[`RadioContainer should validate prop types 1`] = `
+"Warning: Failed prop type: Invalid prop \`items\` of type \`number\` supplied to \`RadioContainer\`, expected an array.
+    in RadioContainer"
+`;
+
+exports[`RadioContainer should validate prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`type\` of value \`checkbox\` supplied to \`RadioContainer\`, expected one of [\"radio\"].
+    in RadioContainer"
+`;
+
+exports[`RadioContainer should validate prop types 3`] = `
+"Warning: Failed prop type: Invalid prop \`value\` of type \`number\` supplied to \`RadioContainer\`, expected \`string\`.
+    in RadioContainer"
+`;

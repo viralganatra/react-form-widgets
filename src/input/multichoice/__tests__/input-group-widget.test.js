@@ -1,28 +1,30 @@
 import React from 'react';
 import InputGroupWidget from '../input-group-widget';
 
-const data = {
+const Item = (props) => <input {...props} />;
+
+function noop() {}
+
+const props = {
     items: [
         { label: 'test 1', value: '1' },
         { label: 'test 2', value: '2' },
     ],
     value: ['2'],
+    isChecked: () => true,
+    onChange: noop,
 };
-
-const Item = (props) => <input {...props} />;
-
-function noop() {}
 
 describe('InputGroupWidget', () => {
     let Component;
 
-    beforeEach(() => {
+    beforeAll(() => {
         Component = InputGroupWidget(Item);
     });
 
     it('should render a list of labels with inputs, based on the `items` prop', () => {
         const wrapper = shallow(
-            <Component {...data} onChange={noop} isChecked={() => true} />,
+            <Component {...props} />,
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -30,27 +32,20 @@ describe('InputGroupWidget', () => {
     });
 
     it('should validate the prop types', () => {
-        const error = console.error;
-        console.error = jest.fn();
-
-        shallow(<Component
-            {...data}
-            onChange={noop}
-            isChecked={noop}
-            items={[]}
-        />);
-
-        shallow(
-            <Component {...data} onChange={2} isChecked={noop} />,
+        const wrapperInvalidItems = () => shallow(
+            <Component {...props} items={2} />,
         );
 
-        expect(() => shallow(
-            <Component {...data} onChange={noop} />),
-        ).toThrowErrorMatchingSnapshot();
+        const wrapperInvalidIsChecked = () => shallow(
+            <Component {...props} isChecked={[]} />,
+        );
 
-        expect(console.error.mock.calls[0][0]).toBeDefined();
-        expect(console.error.mock.calls[1][0]).toBeDefined();
+        const wrapperInvalidOnChange = () => shallow(
+            <Component {...props} onChange={[]} />,
+        );
 
-        console.error = error;
+        expect(wrapperInvalidItems).toThrowErrorMatchingSnapshot();
+        expect(wrapperInvalidIsChecked).toThrowErrorMatchingSnapshot();
+        expect(wrapperInvalidOnChange).toThrowErrorMatchingSnapshot();
     });
 });

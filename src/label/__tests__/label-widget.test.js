@@ -9,14 +9,9 @@ describe('LabelWidget', () => {
     });
 
     it('should throw an error if there are no children', () => {
-        const error = console.error;
-        console.error = jest.fn();
+        const wrapperInvalidChildren = () => shallow(<LabelWidget />);
 
-        shallow(<LabelWidget />);
-
-        expect(console.error).toBeCalled();
-
-        console.error = error;
+        expect(wrapperInvalidChildren).toThrowErrorMatchingSnapshot();
     });
 
     it('should apply any label props to the label element', () => {

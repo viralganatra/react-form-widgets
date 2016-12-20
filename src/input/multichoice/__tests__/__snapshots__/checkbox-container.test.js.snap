@@ -173,3 +173,18 @@ exports[`CheckboxContainer should render correctly 2`] = `
   onKeyUp={[Function]}
   type="checkbox" />
 `;
+
+exports[`CheckboxContainer should validate prop types 1`] = `
+"Warning: Failed prop type: Invalid prop \`items\` of type \`number\` supplied to \`CheckboxContainer\`, expected an array.
+    in CheckboxContainer"
+`;
+
+exports[`CheckboxContainer should validate prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`type\` of value \`radio\` supplied to \`CheckboxContainer\`, expected one of [\"checkbox\"].
+    in CheckboxContainer"
+`;
+
+exports[`CheckboxContainer should validate prop types 3`] = `
+"Warning: Failed prop type: Invalid prop \`value\` of type \`number\` supplied to \`CheckboxContainer\`, expected an array.
+    in CheckboxContainer"
+`;

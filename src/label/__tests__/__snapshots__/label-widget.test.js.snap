@@ -11,3 +11,8 @@ exports[`LabelWidget should render a single label widget correctly 1`] = `
   Test
 </label>
 `;
+
+exports[`LabelWidget should throw an error if there are no children 1`] = `
+"Warning: Failed prop type: The prop \`children\` is marked as required in \`Label\`, but its value is \`undefined\`.
+    in Label"
+`;

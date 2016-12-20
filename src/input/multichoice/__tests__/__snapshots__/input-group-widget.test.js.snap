@@ -27,4 +27,17 @@ exports[`InputGroupWidget should render a list of labels with inputs, based on t
         object."
 `;
 
-exports[`InputGroupWidget should validate the prop types 1`] = `"isChecked is not a function"`;
+exports[`InputGroupWidget should validate the prop types 1`] = `
+"Warning: Failed prop type: Invalid prop \`items\` of type \`number\` supplied to \`InputMultichoiceGroup\`, expected an array.
+    in InputMultichoiceGroup"
+`;
+
+exports[`InputGroupWidget should validate the prop types 2`] = `
+"Warning: Failed prop type: Invalid prop \`isChecked\` of type \`array\` supplied to \`InputMultichoiceGroup\`, expected \`function\`.
+    in InputMultichoiceGroup"
+`;
+
+exports[`InputGroupWidget should validate the prop types 3`] = `
+"Warning: Failed prop type: Invalid prop \`onChange\` of type \`array\` supplied to \`InputMultichoiceGroup\`, expected \`function\`.
+    in InputMultichoiceGroup"
+`;
