@@ -1,3 +1,17 @@
+exports[`LabelWidget should display the close action if the prop onResetSeletion is present 1`] = `
+<div>
+  <div
+    className="bar"
+    onClick={[Function]}>
+    test
+  </div>
+  <div
+    onClick={[Function]}>
+    X
+  </div>
+</div>
+`;
+
 exports[`LabelWidget should render correctly 1`] = `
 <div
   className="bar"
@@ -12,10 +26,12 @@ exports[`LabelWidget should render correctly 1`] = `
 `;
 
 exports[`LabelWidget should render correctly 2`] = `
-<div
-  className="bar"
-  onClick={[Function]}>
-  test
+<div>
+  <div
+    className="bar"
+    onClick={[Function]}>
+    test
+  </div>
 </div>
 `;
 
@@ -31,5 +47,10 @@ exports[`LabelWidget should validate the prop types 2`] = `
 
 exports[`LabelWidget should validate the prop types 3`] = `
 "Warning: Failed prop type: Invalid prop \`onClick\` of type \`array\` supplied to \`SelectLabel\`, expected \`function\`.
+    in SelectLabel"
+`;
+
+exports[`LabelWidget should validate the prop types 4`] = `
+"Warning: Failed prop type: Invalid prop \`onResetSelection\` of type \`number\` supplied to \`SelectLabel\`, expected \`function\`.
     in SelectLabel"
 `;

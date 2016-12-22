@@ -1,8 +1,13 @@
 import React, { PropTypes } from 'react';
 
-const SelectLabel = ({ label, placeholder, ...rest }) => {
+const SelectLabel = ({ label, placeholder, onResetSelection, ...rest }) => {
     if (label) {
-        return <div {...rest}>{label}</div>;
+        return (
+            <div>
+                <div {...rest}>{label}</div>
+                {onResetSelection ? <div onClick={onResetSelection}>X</div> : null}
+            </div>
+        );
     }
 
     return <div style={{ color: 'grey' }} {...rest}>{placeholder}</div>;
@@ -16,6 +21,7 @@ SelectLabel.propTypes = {
     label: PropTypes.string,
     placeholder: PropTypes.string,
     onClick: PropTypes.func.isRequired,
+    onResetSelection: PropTypes.func,
 };
 
 export default SelectLabel;

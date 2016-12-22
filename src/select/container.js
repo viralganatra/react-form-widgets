@@ -24,10 +24,12 @@ export default class SelectWidget extends Component {
             ]).isRequired,
         })).isRequired,
         onChange: PropTypes.func.isRequired,
+        enableSelectionReset: PropTypes.bool,
     };
 
     static defaultProps = {
         onChange: noop,
+        enableSelectionReset: false,
     }
 
     constructor(props) {
@@ -77,14 +79,27 @@ export default class SelectWidget extends Component {
 
     render() {
         const { displayItems, selectedItem: { label } } = this.state;
+        const { items, enableSelectionReset } = this.props;
+
+        let labelWidgetProps = {
+            label,
+            onClick: this.onShowItems,
+        };
+
+        if (enableSelectionReset) {
+            labelWidgetProps = {
+                ...labelWidgetProps,
+                onResetSelection: this.onItemSelection,
+            };
+        }
 
         const ComposedContainer = ClickOutside(GroupItemsContainer(GroupItemsWidget));
 
         return (
             <div>
-                <LabelWidget label={label} onClick={this.onShowItems} />
+                <LabelWidget {...labelWidgetProps} />
                 <ComposedContainer
-                    items={this.props.items}
+                    items={items}
                     onItemSelection={this.onItemSelection}
                     shouldDisplay={displayItems}
                     onClickOutside={this.onHideItems}
