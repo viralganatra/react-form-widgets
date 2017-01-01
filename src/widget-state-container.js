@@ -13,12 +13,8 @@ export default function WidgetStateContainerHOC(WrappedComponent) {
             super(props);
 
             this.state = {
-                value: this.getDefaultValue(props),
+                value: this.getValue(props),
             };
-        }
-
-        getDefaultValue({ value }) {
-            return value || '';
         }
 
         onEvent = (eventName) => (event, value) => {
@@ -44,9 +40,23 @@ export default function WidgetStateContainerHOC(WrappedComponent) {
             return type === 'checkbox' || type === 'radio';
         }
 
+        getValue({ value, defaultValue }) {
+            if (value !== undefined && value !== null) {
+                return value;
+            } else if (defaultValue !== undefined && defaultValue !== null) {
+                return defaultValue;
+            }
+
+            return '';
+        }
+
         getEventParams(event, value) {
             const { target: { checked } } = event;
-            const newValue = value || this.state.value;
+
+            const newValue = this.getValue({
+                value,
+                defaultValue: this.state.value,
+            });
 
             let data = { event, value: newValue };
 

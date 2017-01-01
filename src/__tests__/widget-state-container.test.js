@@ -7,9 +7,11 @@ const InputWidget = (props) => <input {...props} />;
 
 describe('InputWidget', () => {
     let ComposedComponent;
+    let methodSpy;
 
     beforeEach(() => {
         ComposedComponent = WidgetStateContainer(InputWidget);
+        methodSpy = jest.fn();
     });
 
     it('should render correctly, passing all props to the decorated component', () => {
@@ -21,7 +23,6 @@ describe('InputWidget', () => {
     });
 
     it('should listen to and call event methods, such as onBlur', () => {
-        const methodSpy = jest.fn();
         const wrapper = mount(
             <ComposedComponent
                 onKeyPress={methodSpy}
@@ -49,7 +50,6 @@ describe('InputWidget', () => {
     });
 
     it('should set the value in state when the onChange event occurs and should call the onChange prop with the new value', () => {
-        const methodSpy = jest.fn();
         const wrapper = mount(<ComposedComponent onChange={methodSpy} />);
 
         wrapper.simulate('change', { target: { value: 'testEvent' } });
@@ -59,7 +59,6 @@ describe('InputWidget', () => {
     });
 
     it('should send the checked property when the item is a checkbox or radio', () => {
-        const methodSpy = jest.fn();
         const wrapper = mount(<ComposedComponent onChange={methodSpy} />);
         const wrapperCheckbox = mount(<ComposedComponent type="checkbox" onChange={methodSpy} />);
         const wrapperRadio = mount(<ComposedComponent type="radio" onChange={methodSpy} />);
@@ -71,5 +70,14 @@ describe('InputWidget', () => {
         expect('checked' in methodSpy.mock.calls[0][0]).toBe(false);
         expect('checked' in methodSpy.mock.calls[1][0]).toBe(true);
         expect('checked' in methodSpy.mock.calls[2][0]).toBe(true);
+    });
+
+    it('should set the value to an empty string when the received input is an empty string', () => {
+        const wrapper = mount(<ComposedComponent onChange={methodSpy} />);
+
+        wrapper.simulate('change', { target: { value: 'testEvent' } });
+        wrapper.simulate('change', { target: { value: '' } });
+
+        expect(methodSpy.mock.calls[1][0].value).toBe('');
     });
 });
