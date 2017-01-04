@@ -1,0 +1,8 @@
+exports[`SelectSearchWidget should render correctly, setting the focus on mount 1`] = `
+<SelectSearchWidget>
+  <mockConstructor
+    inputRef={[Function]}>
+    <input />
+  </mockConstructor>
+</SelectSearchWidget>
+`;

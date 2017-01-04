@@ -25,6 +25,7 @@ export default class SelectWidget extends Component {
         })).isRequired,
         onChange: PropTypes.func.isRequired,
         enableSelectionReset: PropTypes.bool,
+        enableSearch: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -79,7 +80,7 @@ export default class SelectWidget extends Component {
 
     render() {
         const { displayItems, selectedItem: { label } } = this.state;
-        const { items, enableSelectionReset } = this.props;
+        const { items, enableSelectionReset, enableSearch } = this.props;
 
         let labelWidgetProps = {
             label,
@@ -103,6 +104,7 @@ export default class SelectWidget extends Component {
                     onItemSelection={this.onItemSelection}
                     shouldDisplay={displayItems}
                     onClickOutside={this.onHideItems}
+                    enableSearch={enableSearch}
                 />
             </div>
         );

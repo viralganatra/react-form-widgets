@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const Input = (props) => {
-    return <input {...props} />;
+const Input = ({ inputRef, ...rest }) => {
+    return <input {...rest} ref={inputRef} />;
 };
 
 Input.defaultProps = {
     type: 'text',
+};
+
+Input.propTypes = {
+    inputRef: PropTypes.func,
 };
 
 export default Input;

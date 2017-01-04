@@ -1,3 +1,119 @@
+exports[`GroupItemsContainer should display the search widget by default 1`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "overflow": "auto",
+      "width": "220px",
+    }
+  }>
+  <SelectSearchWidget
+    onChange={[Function]} />
+  <Item
+    items={
+      Array [
+        Object {
+          "label": "test",
+          "value": 1,
+        },
+        Object {
+          "label": "foo",
+          "value": 2,
+        },
+        Object {
+          "label": "apple",
+          "value": 3,
+        },
+      ]
+    }
+    test="1" />
+</div>
+`;
+
+exports[`GroupItemsContainer should filter the array of items, returning a reduced number of items 1`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "overflow": "auto",
+      "width": "220px",
+    }
+  }>
+  <SelectSearchWidget
+    onChange={[Function]} />
+  <Item
+    items={
+      Array [
+        Object {
+          "label": "apple",
+          "value": 3,
+        },
+      ]
+    }
+    test="1" />
+</div>
+`;
+
+exports[`GroupItemsContainer should filter the array of items, returning a reduced number of items 2`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "overflow": "auto",
+      "width": "220px",
+    }
+  }>
+  <SelectSearchWidget
+    onChange={[Function]} />
+  <Item
+    items={
+      Array [
+        Object {
+          "label": "test",
+          "value": 1,
+        },
+        Object {
+          "label": "foo",
+          "value": 2,
+        },
+        Object {
+          "label": "apple",
+          "value": 3,
+        },
+      ]
+    }
+    test="1" />
+</div>
+`;
+
+exports[`GroupItemsContainer should filter the array of items, returning a reduced number of items 3`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "overflow": "auto",
+      "width": "220px",
+    }
+  }>
+  <SelectSearchWidget
+    onChange={[Function]} />
+  <Item
+    items={
+      Array [
+        Object {
+          "label": "test",
+          "value": 1,
+        },
+        Object {
+          "label": "apple",
+          "value": 3,
+        },
+      ]
+    }
+    test="1" />
+</div>
+`;
+
 exports[`GroupItemsContainer should render correctly 1`] = `null`;
 
 exports[`GroupItemsContainer should render correctly 2`] = `
@@ -10,11 +126,55 @@ exports[`GroupItemsContainer should render correctly 2`] = `
     }
   }>
   <Item
+    items={
+      Array [
+        Object {
+          "label": "test",
+          "value": 1,
+        },
+        Object {
+          "label": "foo",
+          "value": 2,
+        },
+        Object {
+          "label": "apple",
+          "value": 3,
+        },
+      ]
+    }
     test="1" />
+</div>
+`;
+
+exports[`GroupItemsContainer should render correctly 3`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+      "overflow": "auto",
+      "width": "220px",
+    }
+  }>
+  <Item
+    items={Array []}
+    test="1" />
+  <p>
+    Sorry, no results found.
+  </p>
 </div>
 `;
 
 exports[`GroupItemsContainer should validate the prop types 1`] = `
 "Warning: Failed prop type: The prop \`shouldDisplay\` is marked as required in \`SelectGroupItemsContainer\`, but its value is \`null\`.
+    in SelectGroupItemsContainer"
+`;
+
+exports[`GroupItemsContainer should validate the prop types 2`] = `
+"Warning: Failed prop type: The prop \`items\` is marked as required in \`SelectGroupItemsContainer\`, but its value is \`null\`.
+    in SelectGroupItemsContainer"
+`;
+
+exports[`GroupItemsContainer should validate the prop types 3`] = `
+"Warning: Failed prop type: Invalid prop \`enableSearch\` of type \`number\` supplied to \`SelectGroupItemsContainer\`, expected \`boolean\`.
     in SelectGroupItemsContainer"
 `;

@@ -1,0 +1,30 @@
+exports[`FilterArrayObjectsByKey should accept case sensitive values 1`] = `
+Array [
+  Object {
+    "label": "Apple",
+  },
+]
+`;
+
+exports[`FilterArrayObjectsByKey should accept case sensitive values 2`] = `Array []`;
+
+exports[`FilterArrayObjectsByKey should filter a list of items based on a key 1`] = `
+Array [
+  Object {
+    "label": "Apple",
+  },
+]
+`;
+
+exports[`FilterArrayObjectsByKey should filter a list of items based on a key 2`] = `
+Array [
+  Object {
+    "label": "Pear",
+  },
+  Object {
+    "label": "Bear",
+  },
+]
+`;
+
+exports[`FilterArrayObjectsByKey should filter a list of items based on a key 3`] = `Array []`;

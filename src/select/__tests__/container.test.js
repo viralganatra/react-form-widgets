@@ -28,10 +28,14 @@ describe('Container', () => {
         const wrapperEnableSelectionReset = shallow(
             <SelectContainer {...props} enableSelectionReset={true} />,
         );
+         const wrapperEnableSearch = shallow(
+             <SelectContainer {...props} enableSearch={true} />,
+        );
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapperSelected).toMatchSnapshot();
         expect(wrapperEnableSelectionReset).toMatchSnapshot();
+        expect(wrapperEnableSearch).toMatchSnapshot();
 
         wrapper.find('div').childAt(0).simulate('click');
 

@@ -74,6 +74,30 @@ exports[`Container should render correctly 4`] = `
   <mockConstructor
     onClick={[Function]} />
   <Mock
+    enableSearch={true}
+    items={
+      Array [
+        Object {
+          "label": "Test 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Test 2",
+          "value": 2,
+        },
+      ]
+    }
+    onClickOutside={[Function]}
+    onItemSelection={[Function]}
+    shouldDisplay={false} />
+</div>
+`;
+
+exports[`Container should render correctly 5`] = `
+<div>
+  <mockConstructor
+    onClick={[Function]} />
+  <Mock
     items={
       Array [
         Object {
@@ -92,7 +116,7 @@ exports[`Container should render correctly 4`] = `
 </div>
 `;
 
-exports[`Container should render correctly 5`] = `
+exports[`Container should render correctly 6`] = `
 <div>
   <mockConstructor
     onClick={[Function]} />
