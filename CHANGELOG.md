@@ -1,3 +1,7 @@
+## 0.7.0 (04 Jan, 2017)
+
+* Implement select widget
+
 ## 0.6.0 (12 Dec, 2016)
 
 * Implement radio group
